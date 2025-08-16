@@ -2087,13 +2087,17 @@ Años despué a finales de mis 13 años decidí que ya no queria que este fuera 
 <!-- Lenis JS desde unpkg -->
 <script src="https://unpkg.com/@studio-freight/lenis@1.0.14/bundled/lenis.js"></script>
 <script>
-  const lenis = new Lenis()
+  const lenis = new Lenis({
+  duration: 1.2,
+  easing: t => t, // lineal
+  smooth: true
+})
 
-  function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
-  }
-
+function raf(time) {
+  lenis.raf(time)
   requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
 </script>
 </body></html>
