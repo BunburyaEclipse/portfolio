@@ -2081,4 +2081,18 @@ Años despué a finales de mis 13 años decidí que ya no queria que este fuera 
 						justify-content: start !important;
 					}
 
-				</style><div id="dropdown"></div></template></astro-dev-toolbar-app-canvas></template></astro-dev-toolbar></body></html>
+				</style><div id="dropdown"></div></template></astro-dev-toolbar-app-canvas></template></astro-dev-toolbar>
+
+<!-- Lenis JS desde unpkg -->
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.14/bundled/lenis.js"></script>
+<script>
+  const lenis = new Lenis()
+
+  function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+  }
+
+  requestAnimationFrame(raf)
+</script>
+</body></html>
